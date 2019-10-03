@@ -1,0 +1,134 @@
+.masthead{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#header-nav{
+  .nav-item{
+    @include media-breakpoint-up(lg){
+      position: relative;
+      padding-right: 10px;
+      padding-left: 10px;
+      text-align: center;
+      align-self: center;
+      line-height: 1.2em;
+
+      &::after{
+        content: "";
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        border: 3px solid #000;
+        border-radius: 50%;
+        top: 50%;
+        margin-top:-2px;
+        right: -2px;
+      }
+
+      &:first-child{
+        padding-left:0;
+      }
+
+      &:last-child{
+        padding-right:0;
+
+        &::after{
+          border: none;
+        }
+      }
+    }
+  }
+  .nav-link{
+    font-family: $font-family-condensed;
+    font-weight: $font-weight-normal;
+    font-size: 24px;
+    color: #000;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus{
+      color: $color-main;
+    }
+  }
+
+  .nav-item.active{
+    .nav-link{
+      color: $color-main;
+    }
+  }
+
+  &.navbar-light .navbar-toggler{
+    border-color:#000;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+#hero{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+
+  &.hp-hero{
+    padding-top: 60px;
+    padding-bottom: 100px;
+
+    .hero-caption{
+      text-align: center;
+      color: #fff;
+
+      h1{
+        font-family: $font-family-serif;
+        font-weight: $font-weight-bold;
+        margin-bottom: 0;
+        line-height: 1em;
+      }
+      p{
+        font-family: $font-family-sans;
+        font-size: 34px;
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+}
+
+.hero-nav{
+  background-color: $color-alt-dark;
+
+  ul{
+    list-style: none;
+    padding-left:0;
+
+    li{
+      padding: 20px;
+      border-bottom: 1px solid #fff;
+      transition: all .2s ease;
+
+      &:last-child{
+        border-bottom:none;
+      }
+
+      a{
+        color: #fff;
+        font-family: $font-family-sans;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        display: block;
+
+        &:hover{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      &:hover{
+        background-color: $color-alt;
+      }
+    }
+  }
+}

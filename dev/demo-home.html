@@ -8,7 +8,7 @@
   <meta http-equiv="cache-control" content="public">
   <meta http-equiv="cache-control" content="private">
 
-  <link href="https://fonts.googleapis.com/css?family=Maitree:400,700|Nunito+Sans:400,600,700|Nunito:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400|Barlow:300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link href="../wp-theme-files/style.css" rel="stylesheet" />
 
@@ -18,13 +18,13 @@
 <body>
   <header id="header">
     <div class="masthead" style="background-image:url(../wp-theme-files/images/sunset.jpg); background-position:center center;">
-      <div class="container-fluid">
+      <div class="container">
         <a href="#" class="logo">
           <img src="../wp-theme-files/images/logo-white.png" class="img-fluid d-block" alt="" />
         </a>
       </div>
     </div>
-    <nav id="header-nav" class="navbar navbar-expand-lg">
+    <nav id="header-nav" class="navbar navbar-light navbar-expand-lg">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle Navigation">
           <span class="navbar-toggler-icon"></span>
@@ -103,11 +103,11 @@
                 </div>
 
                 <a href="#featured-events-carousel" class="carousel-control-prev" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <i class="fas fa-chevron-left" aria-hidden="true"></i>
                   <span class="sr-only">Previous</span>
                 </a>
-                <a href="#featured-events-carousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <a href="#featured-events-carousel" class="carousel-control-next" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right" aria-hidden="true"></i>
                   <span class="sr-only">Next</span>
                 </a>
               </div>
@@ -131,9 +131,9 @@
           <div class="col-lg-5">
             <article>
               <h2>Lake Anna on Social Media</h2>
-              <h4>About</h4>
+              <h4 class="subtitle">About</h4>
               <p>Lake Anna, Virginia, Lake Anna Business, Lake Anna Vacations, Lake Anna Real Estate, Lake Anna Activities.</p>
-              <h4>Company Overview</h4>
+              <h4 class="subtitle">Company Overview</h4>
               <p>The Lake Anna Business Partnership, composed of business and professional people, is a non-profit organization that was created to promote business and response...</p>
               <a href="#" class="read-more">READ MORE</a>
             </article>
@@ -153,18 +153,26 @@
               <div id="where-to-stay-carousel" class="carousel slide" data-ride="">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-stay_location="<h4 class='subtitle'>High Point Marina</h4>" data-stay_description="<p>High Point Marina is a full-service, on-stop-shop for all your fishing and boating needs while you are visiting beautiful Lake Anna, Va. The Lighthouse Inn offers excellent accommodations and is the only waterfront motel on the lake. The rooms are clean and well furnished.</p><p>The dock is less than 70' from your room!</p>" data-stay_link="<a href='#' class='btn-main'>Map & Directions</a>">
-                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block" alt="" />
+                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
 
                   <div class="carousel-item active" data-stay_location="<h4 class='subtitle'>High Point Marina2</h4>" data-stay_description="<p>High Point Marina is a full-service, on-stop-shop for all your fishing and boating needs while you are visiting beautiful Lake Anna, Va. The Lighthouse Inn offers excellent accommodations and is the only waterfront motel on the lake. The rooms are clean and well furnished.</p><p>The dock is less than 70' from your room!</p>" data-stay_link="<a href='#' class='btn-main'>Map & Directions</a>">
-                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block" alt="" />
+                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
 
                   <div class="carousel-item active" data-stay_location="<h4 class='subtitle'>High Point Marina3</h4>" data-stay_description="<p>High Point Marina is a full-service, on-stop-shop for all your fishing and boating needs while you are visiting beautiful Lake Anna, Va. The Lighthouse Inn offers excellent accommodations and is the only waterfront motel on the lake. The rooms are clean and well furnished.</p><p>The dock is less than 70' from your room!</p>" data-stay_link="<a href='#' class='btn-main'>Map & Directions</a>">
-                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block" alt="" />
+                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
-
                 </div>
+
+                <a href="#where-to-stay-carousel" class="carousel-control-prev" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a href="#where-to-stay-carousel" class="carousel-control-next" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
             </div>
           </div>
@@ -188,12 +196,12 @@
         </div>
         <div class="locations-list">
           <div class="location">
-            <h4>Lake Anna State Park</h4>
+            <h4 class="subtitle">Lake Anna State Park</h4>
             <p>Covering more tha 13,000 acres with over 250 miles of shore line located in Louisa, orange and Spotsylvania counties, Lake Anna is one of the largest freshwater inland lakes in Virginia.</p>
             <p>Close to Richmond, Fredericksburg and Charlottesville, Lake Anna is 72 miles south of Washington D.C. and easy to reach from anywhere in Virginia.</p>
           </div>
           <div class="location">
-            <h4>Another Point of Interest</h4>
+            <h4 class="subtitle">Another Point of Interest</h4>
             <p>Lorem ipsum dolor site amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus.</p>
             <p>Lorem ipsum dolor site amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus.</p>
           </div>
@@ -210,13 +218,15 @@
               <div class="card">
                 <div id="event-cat-1" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-1" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-1">Local Events</a>
+                    <a href="#event-cat-items-1" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-1">Local Events<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-1" class="collapse" aria-labelledby="event-cat-1" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title">
+                        <a href="#">April Spring Event</a>
+                      </h4>
                       <p class="event-item-date">Mon April 15</p>
                       <p class="event-item-desc">Come celebrate at Lake Anna for Spring fun!</p>
                     </div>
@@ -227,19 +237,19 @@
               <div class="card">
                 <div id="event-cat-2" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-2" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-2">LABP Hosted Events</a>
+                    <a href="#event-cat-items-2" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-2">LABP Hosted Events<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-2" class="collapse" aria-labelledby="event-cat-2" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                       <p class="event-item-desc">Come celebrate at Lake Anna for Spring fun!</p>
                     </div>
 
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                       <p class="event-item-desc">Come celebrate at Lake Anna for Spring fun!</p>
                     </div>
@@ -250,13 +260,13 @@
               <div class="card">
                 <div id="event-cat-3" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-3" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-3">Member Events</a>
+                    <a href="#event-cat-items-3" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-3">Member Events<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-3" class="collapse" aria-labelledby="event-cat-3" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -266,13 +276,13 @@
               <div class="card">
                 <div id="event-cat-4" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-4" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-4">Board Meetings</a>
+                    <a href="#event-cat-items-4" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-4">Board Meetings<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-4" class="collapse" aria-labelledby="event-cat-4" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -282,13 +292,13 @@
               <div class="card">
                 <div id="event-cat-5" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-5" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-5">Holidays</a>
+                    <a href="#event-cat-items-5" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-5">Holidays<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-5" class="collapse" aria-labelledby="event-cat-5" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -298,13 +308,13 @@
               <div class="card">
                 <div id="event-cat-6" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-6" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-6">Lake Anna State Park</a>
+                    <a href="#event-cat-items-6" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-6">Lake Anna State Park<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-6" class="collapse" aria-labelledby="event-cat-6" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -314,13 +324,13 @@
               <div class="card">
                 <div id="event-cat-7" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-7" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-7">Fredericksburg</a>
+                    <a href="#event-cat-items-7" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-7">Fredericksburg<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-7" class="collapse" aria-labelledby="event-cat-7" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -330,13 +340,13 @@
               <div class="card">
                 <div id="event-cat-8" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-8" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-8">Louisa County</a>
+                    <a href="#event-cat-items-8" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-8">Louisa County<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
                 <div id="event-cat-items-8" class="collapse" aria-labelledby="event-cat-8" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -346,13 +356,13 @@
               <div class="card">
                 <div id="event-cat-9" class="card-header">
                   <h3>
-                    <a href="#event-cat-items-9" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-9">Spotsylvania County</a>
+                    <a href="#event-cat-items-9" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="event-cat-items-9">Spotsylvania County<i class="fas fa-chevron-up"></i></a>
                   </h3>
                 </div>
-                <div id="event-cat-items-9 class="collapse" aria-labelledby="event-cat-9" data-parent="#event-categories">
+                <div id="event-cat-items-9" class="collapse" aria-labelledby="event-cat-9" data-parent="#event-categories">
                   <div class="card-body">
                     <div class="event-item">
-                      <h4>April Spring Event</h4>
+                      <h4 class="event-title"><a href="#">April Spring Event</a></h4>
                       <p class="event-item-date">Mon April 15</p>
                     </div>
                   </div>
@@ -441,7 +451,7 @@
             </div>
             <div class="form-group">
               <label for="message" class="sr-only">Message</label>
-              <textarea rows="4" id="message" class="form-control" placeholder="Message" />
+              <textarea rows="4" id="message" class="form-control" placeholder="Message"></textarea>
             </div>
             <div class="form-group">
               <input type="submit" class="btn-main" value="Submit" />

@@ -1,0 +1,146 @@
+body{
+  font-family: $font-family-serif;
+  font-size: 18px;
+  color: $grey;
+}
+
+h1{
+  font-family: $font-family-condensed;
+  font-weight: $font-weight-normal;
+  font-size: 65px;
+}
+
+h2{
+  font-family: $font-family-sans;
+  font-weight: $font-weight-light;
+  font-size: 65px;
+  color: $color-main;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+h3{
+  font-family: $font-family-sans;
+  font-weight: $font-weight-semibold;
+  font-size: 38px;
+}
+
+h4{
+  font-family: $font-family-sans;
+  font-weight: $font-weight-bold;
+  font-size: 20px;
+}
+
+.subtitle{
+  color: #000;
+  text-transform: uppercase;
+}
+
+a{
+  transition: all .2s ease;
+  color: $color-alt;
+  font-weight: $font-weight-semibold;
+
+  &:hover,
+  &:focus{
+    color: $color-main;
+  }
+}
+.read-more{
+  font-family: $font-family-sans;
+}
+
+.btn-main{
+  display: inline-block;
+  border: none;
+  font-family: $font-family-sans;
+  font-weight: $font-weight-bold;
+  color: #fff;
+  background-color: $color-main;
+  padding: 5px 40px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus{
+    color: #fff;
+    text-decoration: none;
+    background-color: $color-alt;
+  }
+}
+
+section{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.border-box-left{
+  @include media-breakpoint-up(sm){
+    position: relative;
+    z-index: 1;
+
+    &::after{
+      content:"";
+      position: absolute;
+      height: 430px;
+      width: 365px;
+      top: -100px;
+      left: 0;
+      border: 4px solid $color-main;
+    }
+
+    .carousel{
+      z-index:3;
+    }
+  }
+}
+
+.border-box-right{
+  @include media-breakpoint-up(sm){
+    position: relative;
+    z-index: 1;
+
+    &::after{
+      content: "";
+      position: absolute;
+      height: 430px;
+      width: 365px;
+      top: -70px;
+      right:0;
+      border: 4px solid $color-main;
+    }
+
+    .carousel{
+      z-index: 3;
+    }
+  }
+}
+
+.small-gallery{
+  .fas{
+    color: $color-main;
+    background-color: $color-alt-dark;
+    font-size:42px;
+    height:55px;
+    width:55px;
+    padding-top:6px;
+    border-radius: 50%;
+    transition: all .2s ease;
+
+    &.fa-chevron-right{
+      padding-left:4px;
+    }
+    &.fa-chevron-left{
+      padding-right:4px;
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next{
+    opacity: 1;
+
+    &:hover .fas{
+      color: #fff;
+    }
+  }
+}
