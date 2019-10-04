@@ -94,3 +94,48 @@
     }
   }
 }
+
+#affiliations{
+  ul{
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .join{
+    max-width: 254px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2{
+      font-size: 35px;
+    }
+  }
+}
+
+#free-guide{
+  text-align: center;
+  color: #fff;
+  background-color: $color-alt;
+
+  h3{
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-family: $font-family-sans;
+    font-size: 20px;
+    font-weight: $font-weight-regular;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-main{
+    margin-top: 25px;
+  }
+}
