@@ -104,6 +104,11 @@ section{
       z-index:3;
     }
   }
+
+  &>img{
+    position:relative;
+    z-index: 3;
+  }
 }
 
 .border-box-right{
@@ -124,6 +129,11 @@ section{
     .carousel{
       z-index: 3;
     }
+  }
+
+  &>img{
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -153,5 +163,17 @@ section{
     &:hover .fas{
       color: #fff;
     }
+  }
+}
+
+.img-card{
+  margin-top: 40px;
+  
+  h3{
+    font-family: $font-family-condensed;
+    font-size: 40px;
+    font-weight: $font-weight-light;
+    color: #000;
+    text-transform: uppercase;
   }
 }
