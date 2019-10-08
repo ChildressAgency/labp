@@ -247,3 +247,63 @@ section{
   font-size: 40px;
   color: #000;
 }
+
+.resource-list{
+  list-style: none;
+  padding-left: 0;
+
+  li{
+    margin-bottom: 20px;
+  }
+
+  h3{
+    font-family: $font-family-condensed;
+    font-weight: $font-weight-light;
+    font-size: 32px;
+    color: $color-alt-dark;
+    margin-bottom: 0;
+  }
+
+  a{
+    font-family: $font-family-sans;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.faq-section{
+  h3{
+    font-family: $font-family-condensed;
+    font-weight: $font-weight-light;
+    color: #000;
+  }
+
+  .card{
+    border: none;
+
+    .card-header{
+      background-color: transparent;
+      border-bottom: none;
+
+      a{
+        color: $color-main;
+
+        &.collapsed{
+          color: $color-alt;
+
+          &:hover{
+            color: $color-main;
+            text-decoration: none;
+          }
+        }
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+
+    .card-body{
+      padding-top: 0;
+    }
+  }
+}
