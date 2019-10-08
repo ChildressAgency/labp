@@ -137,7 +137,7 @@ section{
   }
 }
 
-.small-gallery{
+.carousel{
   .fas{
     color: $color-main;
     background-color: $color-alt-dark;
@@ -305,5 +305,47 @@ section{
     .card-body{
       padding-top: 0;
     }
+  }
+}
+
+#news-carousel{
+  margin-top: 60px;
+  width: 100%;
+
+  .col-md-6{
+    flex: none;
+    float: left;
+  }
+
+  .carousel-inner{
+    .carousel-item-next{
+      transform: translateX(50%);
+    }
+
+    .carousel-item-prev{
+      transform: translateX(-50%);
+    }
+    .carousel-item-right{
+      transform: translateX(0);
+
+      &.active{
+        transform: translateX(50%);
+      }
+    }
+
+    .carousel-item-left{
+      transform: translateX(0);
+
+      &.active{
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .carousel-control-next{
+    right: -125px;
+  }
+  .carousel-control-prev{
+    left: -125px;
   }
 }
