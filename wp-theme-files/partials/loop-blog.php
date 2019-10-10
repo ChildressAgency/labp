@@ -12,6 +12,6 @@
     <h3 class="card-title"><?php the_title(); ?></h3>
     <p class="card-subtitle"><?php echo get_the_date('F d, Y'); ?></p>
     <?php the_excerpt(); ?>
-    <a href="<?php the_permalink(); ?>" class="read-more"><?php echo esc_html__('READ MORE', 'option'); ?></a>
+    <a href="<?php the_permalink(); ?>" class="read-more"><?php echo esc_html__('READ MORE', 'labp'); ?></a>
   </div>
 </div>
