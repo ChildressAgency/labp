@@ -33,7 +33,7 @@ function labp_acf_settings_dir($dir){
 
 add_action('plugins_loaded', 'labp_load_textdomain');
 function labp_load_textdomain(){
-  load_plugin_textdomain('labp', false, basename(LABP_PLUGIN_DIR) . '/languages')
+  load_plugin_textdomain('labp', false, basename(LABP_PLUGIN_DIR) . '/languages');
 }
 
 //require_once LABP_PLUGIN_DIR . '/includes/labp-create-post-types.php';
