@@ -80,6 +80,33 @@ a{
   }
 }
 
+.alignnone{
+  display: block;
+  max-width: 100%;
+  height:auto;
+  margin: 25px 0;
+}
+.aligncenter{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto;
+}
+.alignleft{
+  display: block;
+  float: left;
+  max-width: 100%;
+  height: auto;
+  margin: 25px 25px 25px 0;
+}
+.alignright{
+  display: block;
+  float: right;
+  max-width: 100%;
+  height: auto;
+  margin: 25px 0 25px 25px;
+}
+
 section{
   padding-top: 40px;
   padding-bottom: 40px;
