@@ -9,15 +9,15 @@
         <div class="row">
           <div class="col-lg-6">
             <article>
-              <?php echo apply_filters('the_content', wp_kses_post(get_field('blog_page_intro', $blog_page_id))); ?>
+              <?php echo apply_filters('the_content', wp_kses_post(get_field('news_section_intro', $blog_page_id))); ?>
             </article>
           </div>
           <div class="col-lg-6">
             <?php
-              $blog_page_intro_img = get_field('blog_page_intro_image', $blog_page_id);
-              if($blog_page_intro_img): ?>
+              $news_section_intro_img = get_field('news_section_intro_image', $blog_page_id);
+              if($news_section_intro_img): ?>
                 <div class="border-box-right">
-                  <img src="<?php echo esc_url($blog_page_intro_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($blog_page_intro_img['alt']); ?>" />
+                  <img src="<?php echo esc_url($news_section_intro_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($news_section_intro_img['alt']); ?>" />
                 </div>
             <?php endif; ?>
           </div>
@@ -48,116 +48,66 @@
 
                 <a href="#news-carousel" class="carousel-control-prev" role="button" data-slide="prev">
                   <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only"><?php echo esc_html__('Previous', 'labp'); ?></span>
                 </a>
                 <a href="#news-carousel" class="carousel-control-next" role="button" data-slide="next">
                   <i class="fas fa-chevron-right" aria-hidden="true"></i>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only"><?php echo esc_html__('Next', 'labp'); ?></span>
                 </a>
               </div>
             </div>
 
-            <a href="#" class="btn-main mt-5">All News</a>
+            <?php
+              $news_cat_id = get_cat_ID('news');
+              $news_cat_link = get_category_link($new_cat_id);
+            ?>
+            <a href="<?php echo esc_url($news_cat_link); ?>" class="btn-main mt-5"><?php echo esc_html__('All News', 'labp'); ?></a>
         <?php endif; ?>
       </section>
 
       <section id="blog">
         <div class="row">
           <div class="col-lg-6">
-            <div class="border-box-left">
-              <img src="../wp-theme-files/images/lake-dock.jpg" class="img-fluid d-block mx-auto" alt="" />
-            </div>
+            <?php
+              $blog_section_intro_img = get_field('blog_section_intro_image', $blog_page_id);
+              if($blog_section_intro_img): ?>
+                <div class="border-box-left">
+                  <img src="<?php echo esc_url($blog_section_intro_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($blog_section_intro_img['alt']); ?>" />
+                </div>
+            <?php endif; ?>
           </div>
           <div class="col-lg-6">
             <article>
-              <h2>Lake Anna Blog</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
+              <?php echo apply_filters('the_content', wp_kses_post(get_field('blog_section_intro', $blog_page_id))); ?>
             </article>
           </div>
         </div>
 
-        <div id="blog-loop" class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img src="../wp-theme-files/images/people-at-picnic-table.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
-                <h3 class="card-title">Blog Title 1</h3>
-                <p class="card-subtitle">April 4, 2019</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
+        <?php
+          $blog_posts = new WP_Query(array(
+            'post_type' => 'post',
+            'posts_per_page' => 6,
+            'post_status' => 'publish',
+            'category__not_in' => array($news_cat_id)
+          ));
+
+          if($blog_posts->have_posts()): ?>
+            <div id="blog-loop" class="row">
+              <?php $i = 0; while($blog_posts->have_posts()): $blog_posts->the_post(); ?>
+
+                <?php if($i % 2 == 0){ echo '<div class="clearfix d-none-d-md-block d-lg-none"></div>'; } ?>
+                <?php if($i % 3 == 0){ echo '<div class="clearfix d-none d-lg-block"></div>'; } ?>
+
+                <div class="col-md-6 col-lg-4">
+                  <?php get_template_part('partials/loop', 'blog'); ?>
+                </div>
+
+              <?php $i++; endwhile; ?>
+
             </div>
-          </div>
 
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img src="../wp-theme-files/images/beerfest.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
-                <h3 class="card-title">Blog Title 2</h3>
-                <p class="card-subtitle">April 2, 2019</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="clearfix d-none d-md-block d-lg-none"></div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img src="../wp-theme-files/images/raft-rental.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
-                <h3 class="card-title">Blog Title 3</h3>
-                <p class="card-subtitle">March 28, 2019</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="clearfix d-none d-lg-block"></div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img src="../wp-theme-files/images/two-people-restaurant.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
-                <h3 class="card-title">Blog Title 4</h3>
-                <p class="card-subtitle">March 22, 2019</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img src="../wp-theme-files/images/on-microphone.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
-                <h3 class="card-title">Blog Title 5</h3>
-                <p class="card-subtitle">March 17, 2019</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="clearfix d-none d-md-block d-lg-none">
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img src="../wp-theme-files/images/band-playing.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
-                <h3 class="card-title">Blog Title 6</h3>
-                <p class="card-subtitle">March 08, 2019</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet.</p>
-                <a href="#" class="read-more">READ MORE</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ajax-pagination"></div>
+          <div class="ajax-pagination"></div>
+        <?php endif; ?>
       </section>
     </div>
   </main>
