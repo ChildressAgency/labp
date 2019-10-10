@@ -107,7 +107,7 @@
             </div>
 
           <div class="ajax-pagination"></div>
-        <?php endif; ?>
+        <?php endif; wp_reset_postdata(); ?>
       </section>
     </div>
   </main>
