@@ -19,7 +19,7 @@
       $masthead_bg_img = get_field('masthead_background_image', 'option'); 
       $masthead_bg_img_position = get_field('masthead_background_image_position', 'option');
     ?>
-    <div class="masthead" style="background-image:url(<?php esc_url($masthead_bg_img); ?>); background-position:<?php echo esc_attr($masthead_bg_img_position); ?>;">
+    <div class="masthead" style="background-image:url(<?php echo esc_url($masthead_bg_img); ?>); background-position:<?php echo esc_attr($masthead_bg_img_position); ?>;">
       <div class="container">
         <?php
           $custom_logo_id = get_theme_mod('custom_logo');
@@ -30,7 +30,7 @@
           }
         ?>
         <a href="<?php echo esc_url(home_url()); ?>" class="logo">
-          <img src="<?php echo esc_url($logo_url); ?>" class="img-fluid d-block" alt="<?php echo esc_attr(bloginfo('name')); ?>" />
+          <img src="<?php echo esc_url($logo_url[0]); ?>" class="img-fluid d-block" alt="<?php echo esc_attr(bloginfo('name')); ?>" />
         </a>
       </div>
     </div>
@@ -86,8 +86,8 @@
 
   <?php else: ?>
     <?php
-      $nav_hero_bg_img = get_field('nav_hero_bg_img', 'option');
-      $nav_hero_bg_img_position = get_field('nav_hero_bg_img_position', 'option');
+      $nav_hero_bg_img = get_field('nav_hero_background_image', 'option');
+      $nav_hero_bg_img_position = get_field('nav_hero_background_image_position', 'option');
     ?>
     <section id="hero" class="hp-hero" style="background-image:url(<?php echo esc_url($nav_hero_bg_img); ?>); background-position:<?php echo esc_attr($nav_hero_bg_img_position); ?>;">
       <div class="row no-gutters">
