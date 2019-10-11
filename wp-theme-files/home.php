@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php
   $blog_page = get_page_by_path('blog-news');
-  Blog_page_id = $blog_page->ID;
+  $blog_page_id = $blog_page->ID;
 ?>
   <main id="main">
     <div class="container">
