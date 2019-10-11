@@ -48,4 +48,28 @@ function labp_acf_options_page(){
     'capability' => 'edit_posts',
     'redirect' => false
   ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Header Settings', 'labp'),
+    'menu_title' => esc_html__('Header Settings', 'labp'),
+    'parent_slug' => 'general-settings'
+  ));
+  
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Affiliations Section Settings', 'labp'),
+    'menu_title' => esc_html__('Affiliations Section', 'labp'),
+    'parent_slug' => 'general-settings'
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Contact Information', 'labp'),
+    'menu_title' => esc_html__('Contact Information', 'labp'),
+    'parent_slug' => 'general-settings'
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Free Guide Section Settings', 'labp'),
+    'menu_title' => esc_html__('Free Guide Section', 'labp'),
+    'parent_slug' => 'general-settings'
+  ));
 }
