@@ -8,15 +8,15 @@
               <div id="featured-events-carousel" class="carousel slide" data-ride="">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-event_date="March 28, 2019" data-event_desc="<p>This Lake Anna event Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet...</p>" data-event_link="https://childressagency.com">
-                    <img src="../wp-theme-files/images/lighthouse.jpg" class="img-fluid d-block mx-auto" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lighthouse.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
 
                   <div class="carousel-item" data-event_date="March 29, 2019" data-event_desc="<p>sec 2 This Lake Anna event Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet...</p>" data-event_link="https://childressagency.com">
-                    <img src="../wp-theme-files/images/lighthouse.jpg" class="img-fluid d-block mx-auto" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lighthouse.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
 
                   <div class="carousel-item" data-event_date="March 30, 2019" data-event_desc="<p>sec 3 This Lake Anna event Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar dui nec sodales tempus. Aliquam et nulla vel lacus sodales faucibus. Phasellus est est, auctor ac pharetra vitae, congue in sapien. Aliquam purus lacus, tincidunt sit amet...</p>" data-event_link="https://childressagency.com">
-                    <img src="../wp-theme-files/images/lighthouse.jpg" class="img-fluid d-block mx-auto" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/lighthouse.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
                 </div>
 
@@ -57,7 +57,7 @@
             </article>
           </div>
           <div class="col-lg-7">
-            <img src="../wp-theme-files/images/facebook-stream-placeholder.jpg" class="img-fluid d-block" alt="" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook-stream-placeholder.jpg" class="img-fluid d-block" alt="" />
           </div>
         </div>
       </div>
@@ -71,15 +71,15 @@
               <div id="where-to-stay-carousel" class="carousel slide" data-ride="">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-stay_location="<h4 class='subtitle'>High Point Marina</h4>" data-stay_description="<p>High Point Marina is a full-service, on-stop-shop for all your fishing and boating needs while you are visiting beautiful Lake Anna, Va. The Lighthouse Inn offers excellent accommodations and is the only waterfront motel on the lake. The rooms are clean and well furnished.</p><p>The dock is less than 70' from your room!</p>" data-stay_link="<a href='#' class='btn-main'>Map & Directions</a>">
-                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
 
                   <div class="carousel-item" data-stay_location="<h4 class='subtitle'>High Point Marina2</h4>" data-stay_description="<p>High Point Marina is a full-service, on-stop-shop for all your fishing and boating needs while you are visiting beautiful Lake Anna, Va. The Lighthouse Inn offers excellent accommodations and is the only waterfront motel on the lake. The rooms are clean and well furnished.</p><p>The dock is less than 70' from your room!</p>" data-stay_link="<a href='#' class='btn-main'>Map & Directions</a>">
-                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
 
                   <div class="carousel-item" data-stay_location="<h4 class='subtitle'>High Point Marina3</h4>" data-stay_description="<p>High Point Marina is a full-service, on-stop-shop for all your fishing and boating needs while you are visiting beautiful Lake Anna, Va. The Lighthouse Inn offers excellent accommodations and is the only waterfront motel on the lake. The rooms are clean and well furnished.</p><p>The dock is less than 70' from your room!</p>" data-stay_link="<a href='#' class='btn-main'>Map & Directions</a>">
-                    <img src="../wp-theme-files/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/high-point-marina.jpg" class="img-fluid d-block mx-auto" alt="" />
                   </div>
                 </div>
 
@@ -110,7 +110,7 @@
     <section id="locations">
       <div class="container">
         <div class="locations-map">
-          <img src="../wp-theme-files/images/locations-placeholder.jpg" class="img-fluid d-block mx-auto" alt="" />
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/locations-placeholder.jpg" class="img-fluid d-block mx-auto" alt="" />
         </div>
         <div class="locations-list">
           <div class="location">
@@ -127,7 +127,7 @@
       </div>
     </section>
 
-    <section id="events-calendar" style="background-image:url(../wp-theme-files/images/kayakers-on-lake.jpg); background-position:center center;">
+    <section id="events-calendar" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/kayakers-on-lake.jpg); background-position:center center;">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -292,7 +292,7 @@
           <div class="col-lg-6">
             <h2>Calendar</h2>
             <div class="events-calendar">
-              <img src="../wp-theme-files/images/calendar-placeholder.jpg" class="img-fluid d-block mx-auto" alt="" />
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/calendar-placeholder.jpg" class="img-fluid d-block mx-auto" alt="" />
             </div>
           </div>
         </div>
