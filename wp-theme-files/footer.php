@@ -6,7 +6,7 @@
             <?php 
               $affiliate_img = get_sub_field('affiliate_image');
               if($affiliate_img): ?>
-                <img src="<?php echo $affiliate_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($affiliate_img['alt']); ?>" />
+                <img src="<?php echo esc_url($affiliate_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($affiliate_img['alt']); ?>" />
             <?php endif; ?>
           </li>
         <?php endwhile; endif; ?>
@@ -24,7 +24,7 @@
                 <?php endif; if($join_labp_subtitle): ?>
                   <p><?php echo esc_html($join_labp_subtitle); ?></p>
                 <?php endif; if($join_labp_link): ?>
-                  <a href="<?php echo esc_url($join_labp_link['url']); ?>" class="btn-main"><?php echo esc_url($join_labp_link); ?></a>
+                  <a href="<?php echo esc_url($join_labp_link['url']); ?>" class="btn-main"><?php echo esc_html($join_labp_link['title']); ?></a>
                 <?php endif; ?>
               </div>
             </li>
@@ -83,7 +83,7 @@
           </p>
         </div>
         <div class="col-lg-7">
-          <?php echo do_shortcode(get_field('footer_contact_form_shortcode')); ?>
+          <?php echo do_shortcode(get_field('footer_contact_form_shortcode', 'option')); ?>
         </div>
       </div>
     </div>
