@@ -416,3 +416,29 @@ section{
     padding: 0;
   }
 }
+
+.entry-content{
+  @include media-breakpoint-down(md){
+    .border-box-left,
+    .border-box-right{
+      margin-top: 80px;
+    }
+    .wp-block-columns{
+      display: block;
+    }
+  }
+
+  .has-3-columns{
+    .wp-block-column{
+      margin-top:40px;
+    }
+
+    h3{
+      font-family: Barlow Condensed,sans-serif;
+      font-size: 40px;
+      font-weight: 300;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+}

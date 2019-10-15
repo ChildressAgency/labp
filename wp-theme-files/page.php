@@ -10,6 +10,9 @@
               the_content();
             }
           }
+          else{
+            echo esc_html__('Sorry, we could not find what you were looking for.', 'labp');
+          }
         ?>
       </article>
     </section>

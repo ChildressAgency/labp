@@ -117,6 +117,9 @@ function labp_setup(){
   ));
 
   load_theme_textdomain('labp', get_stylesheet_directory_uri() . '/languages');
+
+  add_theme_support('editor-styles');
+  add_editor_style('style-editor.css');
 }
 
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
@@ -148,3 +151,55 @@ function labp_header_fallback_menu(){ ?>
     </ul>
   </div>
 <?php }
+
+add_filter('block_categories', 'labp_custom_block_category', 10, 2);
+function labp_custom_block_category($categories, $post){
+  return array_merge(
+    $categories,
+    array(
+      array(
+        'slug' => 'custom-blocks',
+        'title' => esc_html__('Custom Blocks', 'labp'),
+        'icon' => 'wordpress'
+      )
+    )
+  );
+}
+
+add_action('acf/init', 'labp_register_blocks');
+function labp_register_blocks(){
+  if(function_exists('acf_register_block_type')){
+    acf_register_block_type(array(
+      'name' => 'img_left_offset_border',
+      'title' => esc_html__('Image with Left Offset Border', 'labp'),
+      'description' => esc_html__('Image with Left Offset Border', 'labp'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/img_left_offset_border.php',
+      //'enqueue_style' => get_stylesheet_directory_uri() . '/partials/img_offset_border.css'
+    ));
+
+    acf_register_block_type(array(
+      'name' => 'img_right_offset_border',
+      'title' => esc_html__('Image with Right Offset Border', 'labp'),
+      'description' => esc_html__('Image with Right Offset Border', 'labp'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/img_right_offset_border.php',
+      //'enqueue_style' => get_stylesheet_directory_uri() . '/partials/img_offset_border.css'
+    ));
+
+    acf_register_block_type(array(
+      'name' => 'prestyled_button',
+      'title' => esc_html__('Pre-styled Button', 'labp'),
+      'description' => esc_html__('Add a pre-styled button', 'labp'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/prestyled_button.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/prestyled_button.css'
+    ));
+  }
+}
