@@ -50,7 +50,9 @@ a{
   font-family: $font-family-sans;
 }
 
-.btn-main{
+.btn-main,
+#SFctr a.SFbtn, 
+#SFctr button{
   display: inline-block;
   border: none;
   font-family: $font-family-sans;
