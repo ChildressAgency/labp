@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
     var $new_slide = e.relatedTarget;
     var event_date = '<h4 class="subtitle">' + $($new_slide).data('event_date') + '</h4>';
     var event_desc = $($new_slide).data('event_desc');
-    var event_link = $($new_slide).data('event_link');
+    var event_link = '<a href="' + $($new_slide).data('event_link') + '" class="read-more">READ MORE</a>';
 
     $slide_content_container.children().fadeOut('fast', function(){
       $(this).remove();
@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
     var $new_slide = e.relatedTarget;
     var stay_location = '<h4 class="subtitle">' + $($new_slide).data('stay_location') + '</h4>';
     var stay_desc = $($new_slide).data('stay_description');
-    var stay_link = $($new_slide).data('stay_link');
+    var stay_link = '<a href="' + $($new_slide).data('stay_link') + '" class="btn-main">MAP & DIRECTIONS</a>';
 
     $slide_content_container.children().fadeOut('fast', function(){
       $(this).remove();
