@@ -97,11 +97,11 @@
                       <?php
                         if($s == 0){
                           $first_stay_location = get_sub_field('where_to_stay_location');
-                          $first_stay_desc = get_sub_field('where_to_stay_desc');
+                          $first_stay_desc = get_sub_field('where_to_stay_description');
                           $first_stay_link = get_sub_field('where_to_stay_link');
                         }
                       ?>
-                      <div class="carousel-item<?php if($s == 0){ echo ' active'; } ?>" data-stay_location="<?php echo wp_kses_post(get_sub_field('where_to_stay_location')); ?>" data-stay_description="<?php echo wp_kses_post(get_sub_field('where_to_stay_desc')); ?>" data-stay_link="<?php echo esc_url(get_sub_field('where_to_stay_link')); ?>">
+                      <div class="carousel-item<?php if($s == 0){ echo ' active'; } ?>" data-stay_location="<?php echo wp_kses_post(get_sub_field('where_to_stay_location')); ?>" data-stay_description="<?php echo wp_kses_post(get_sub_field('where_to_stay_description')); ?>" data-stay_link="<?php echo esc_url(get_sub_field('where_to_stay_link')); ?>">
                         <?php $where_to_stay_img = get_sub_field('where_to_stay_image'); ?>
                         <img src="<?php echo esc_url($where_to_stay_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($where_to_stay_img['alt']); ?>" />
                       </div>
