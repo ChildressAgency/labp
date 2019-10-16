@@ -60,31 +60,7 @@
     </nav>
   </header>
 
-  <?php if(get_field('choose_hero_style') == 'Page Title'): ?>
-    <?php
-      $hero_bg_img = get_field('hero_background_image');
-      $hero_bg_img_position = get_field('hero_background_image_position');
-
-      if(!$hero_bg_img){
-        $hero_bg_img = get_field('default_hero_background_image', 'option');
-        $hero_bg_img_position = get_field('default_hero_background_image_position', 'option');
-      }
-    ?>
-
-    <section id="hero" class="hero" style="background-image:url(<?php echo esc_url($hero_bg_img); ?>); background-position:<?php echo esc_attr($hero_bg_img_position); ?>;">
-      <div class="container">
-        <div class="hero-caption">
-          <?php if(is_home() || is_singular('post')): ?>
-            <h1><?php echo esc_html__('Blog & News', 'labp'); ?></h1>
-          <?php else: ?>
-            <h1><?php echo esc_html(get_the_title()); ?></h1>
-          <?php endif; ?>
-        </div>
-      </div>
-      <div class="color-overlay"></div>
-    </section>
-
-  <?php else: ?>
+  <?php if(get_field('choose_hero_style') == 'Nav Menu'): ?>
     <?php
       $nav_hero_bg_img = get_field('nav_hero_background_image', 'option');
       $nav_hero_bg_img_position = get_field('nav_hero_background_image_position', 'option');
@@ -100,9 +76,10 @@
                     $menu_link = get_sub_field('menu_item_link');
                     global $post;
                     $cur_page_id = $post->ID;
-                    $menu_link_id = get_sub_field('menu_item_link', false, false);
+                    //$menu_link_id = get_sub_field('menu_item_link', false, false);
+                    $menu_link_id = url_to_postid($menu_link['url']);
                   ?>
-                  <li <?php if($cur_page_id == $menu_link_id){ echo ' class="active"'; } ?>><a href="<?php esc_url($menu_link['url']); ?>"><?php echo esc_html($menu_link['title']); ?></a></li>
+                  <li <?php if($cur_page_id == $menu_link_id){ echo ' class="active"'; } ?>><a href="<?php echo esc_url($menu_link['url']); ?>"><?php echo esc_html($menu_link['title']); ?></a></li>
                 <?php endwhile; ?>
               </ul>
             </nav>
@@ -127,4 +104,30 @@
         </div>
       </div>
     </section>
+
+  <?php else: ?>
+
+    <?php
+      $hero_bg_img = get_field('hero_background_image');
+      $hero_bg_img_position = get_field('hero_background_image_position');
+
+      if(!$hero_bg_img){
+        $hero_bg_img = get_field('default_hero_background_image', 'option');
+        $hero_bg_img_position = get_field('default_hero_background_image_position', 'option');
+      }
+    ?>
+
+    <section id="hero" class="hero" style="background-image:url(<?php echo esc_url($hero_bg_img); ?>); background-position:<?php echo esc_attr($hero_bg_img_position); ?>;">
+      <div class="container">
+        <div class="hero-caption">
+          <?php if(is_home() || is_singular('post') || is_category()): ?>
+            <h1><?php echo esc_html__('Blog & News', 'labp'); ?></h1>
+          <?php else: ?>
+            <h1><?php echo esc_html(get_the_title()); ?></h1>
+          <?php endif; ?>
+        </div>
+      </div>
+      <div class="color-overlay"></div>
+    </section>
+
   <?php endif; ?>
