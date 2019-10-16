@@ -19,6 +19,16 @@
             <p class="subtitle"><?php echo get_the_date('F j, Y'); ?></p>
           </header>
           <?php the_content(); ?>
+          <nav class="blog-pager">
+              <ul class="pager">
+                  <li class="previous">
+                      <?php previous_post_link('%link', '&larr; Previous Post'); ?>
+                  </li>
+                  <li class="next">
+                      <?php next_post_link('%link', 'Next Post &rarr;'); ?>
+                  </li>
+              </ul>
+          </nav>          
         <?php endwhile; endif; ?>
       </article>
     </section>

@@ -2,6 +2,7 @@
 <?php
   $blog_page = get_page_by_path('blog-news');
   $blog_page_id = $blog_page->ID;
+  $news_cat_id = '';
 ?>
   <main id="main">
     <div class="container">
@@ -59,13 +60,13 @@
 
             <?php
               $news_cat_id = get_cat_ID('news');
-              $news_cat_link = get_category_link($new_cat_id);
+              $news_cat_link = get_category_link($news_cat_id);
             ?>
             <a href="<?php echo esc_url($news_cat_link); ?>" class="btn-main mt-5"><?php echo esc_html__('All News', 'labp'); ?></a>
         <?php endif; ?>
       </section>
 
-      <section id="blog">
+      <section id="blog-archive">
         <div class="row">
           <div class="col-lg-6">
             <?php
@@ -83,31 +84,7 @@
           </div>
         </div>
 
-        <?php
-          $blog_posts = new WP_Query(array(
-            'post_type' => 'post',
-            'posts_per_page' => 6,
-            'post_status' => 'publish',
-            'category__not_in' => array($news_cat_id)
-          ));
-
-          if($blog_posts->have_posts()): ?>
-            <div id="blog-loop" class="row">
-              <?php $i = 0; while($blog_posts->have_posts()): $blog_posts->the_post(); ?>
-
-                <?php if($i % 2 == 0){ echo '<div class="clearfix d-none-d-md-block d-lg-none"></div>'; } ?>
-                <?php if($i % 3 == 0){ echo '<div class="clearfix d-none d-lg-block"></div>'; } ?>
-
-                <div class="col-md-6 col-lg-4">
-                  <?php get_template_part('partials/loop', 'blog'); ?>
-                </div>
-
-              <?php $i++; endwhile; ?>
-
-            </div>
-
-          <div class="ajax-pagination"></div>
-        <?php endif; wp_reset_postdata(); ?>
+      <?php echo do_shortcode('[ajax_load_more container_type="div" transition_container_classes="row" posts_per_page="6" scroll="false" post_type="post" button_label="View More" category__not_in="2"]'); ?>
       </section>
     </div>
   </main>

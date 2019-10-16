@@ -21,14 +21,16 @@ h2{
 
 h3{
   font-family: $font-family-sans;
-  font-weight: $font-weight-semibold;
-  font-size: 38px;
+  font-weight: $font-weight-regular;
+  font-size: 30px;
+  color: #000;
 }
 
 h4{
   font-family: $font-family-sans;
   font-weight: $font-weight-bold;
   font-size: 20px;
+  color: #000;
 }
 
 .subtitle{
@@ -442,5 +444,53 @@ section{
       color: #000;
       text-transform: uppercase;
     }
+  }
+}
+
+form{
+  label{
+    font-family: $font-family-sans;
+    font-size: 20px;
+    font-weight: $font-weight-regular;
+    color: #000;
+  }
+
+  .form-text{
+    font-family: $font-family-sans;
+    font-weight: $font-weight-regular;
+    font-size:18px;
+    color: $color-alt-dark;
+  }
+
+  .form-control{
+    border-color: $grey;
+  }
+}
+
+.alm-btn-wrap{
+  .alm-load-more-btn{
+    &.btn-main{
+      background-color: $color-main;
+      padding: 5px 40px;
+      border-radius: 0;
+      font-size: 18px;
+      margin-top:40px;
+      line-height: 1em;
+
+      &:hover,
+      &:focus{
+        background-color: $color-alt;
+      }
+    }
+  }
+}
+
+.blog-pager{
+  margin-top: 60px;
+  .pager{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
   }
 }
