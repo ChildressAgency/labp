@@ -72,4 +72,10 @@ function labp_acf_options_page(){
     'menu_title' => esc_html__('Free Guide Section', 'labp'),
     'parent_slug' => 'general-settings'
   ));
+
+  acf_add_options_sub_page(array(
+    'page_title' => esc_html__('Membership Details', 'labp'),
+    'menu_title' => esc_html__('Membership Details', 'labp'),
+    'parent_slug' => 'general-settings'
+  ));
 }

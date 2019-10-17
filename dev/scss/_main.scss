@@ -494,3 +494,30 @@ form{
     justify-content: space-around;
   }
 }
+
+#membership-details{
+  .nav-link{
+    font-family: $font-family-sans;
+    font-weight: $font-weight-semibold;
+    font-size: 24px;
+    color: #000;
+    text-transform: uppercase;
+    background-color: transparent;
+
+    &.active,
+    &:hover,
+    &:focus{
+      color: $color-main;
+      background-color: transparent;
+    }
+  }
+
+  .tab-pane{
+    h3{
+      font-family: $font-family-condensed;
+      font-weight: $font-weight-light;
+      color: $color-alt-dark;
+      font-size: 40px;
+    }
+  }
+}
