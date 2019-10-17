@@ -1,0 +1,38 @@
+.border-box-left>img,
+.border-box-right>img{
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width:576px){
+  .border-box-left,
+  .border-box-right{
+    position: relative;
+    z-index: 1;
+  }
+
+  .border-box-left::after{
+    content: "";
+    position: absolute;
+    height: 430px;
+    width: 365px;
+    top: -100px;
+    left: 0;
+    border: 4px solid #FFA44A;
+  }
+
+  .border-box-right::after{
+    content: "";
+    position: absolute;
+    height: 430px;
+    width: 365px;
+    top: -70px;
+    right: 0;
+    border: 4px solid #FFA44A;
+  }
+
+  .border-box-left .carousel,
+  .border-box-right .carousel{
+    z-index: 3;
+  }
+}

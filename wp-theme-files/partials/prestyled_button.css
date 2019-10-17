@@ -1,0 +1,18 @@
+.btn-main{
+  display: inline-block;
+  border: none;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background-color: #FFA44A;
+  padding: 5px 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-main:hover,
+.btn-main:focus{
+  color: #fff;
+  text-decoration: none;
+  background-color: #3A516D;
+}
