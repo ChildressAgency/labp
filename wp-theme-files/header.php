@@ -121,7 +121,7 @@
       <div class="container">
         <div class="hero-caption">
           <?php if(is_home() || is_singular('post') || is_category()): ?>
-            <h1><?php echo esc_html__('Blog & News', 'labp'); ?></h1>
+            <h1><?php echo esc_html__('News', 'labp'); ?></h1>
           <?php else: ?>
             <h1><?php echo esc_html(get_the_title()); ?></h1>
           <?php endif; ?>
