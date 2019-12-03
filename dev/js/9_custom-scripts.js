@@ -39,6 +39,7 @@ jQuery(document).ready(function($){
   $('#news-carousel.carousel .carousel-item').twoItemCarousel();
 
   $('#news-carousel.carousel-heights .carousel-inner .carousel-item').carouselHeights();
+  $('#featured-events-carousel.carousel-heights .carousel-inner .carousel-item').carouselHeights();
 
 }); //jQuery
 

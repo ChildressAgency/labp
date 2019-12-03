@@ -12,7 +12,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="small-gallery border-box-left">
-                <div id="featured-events-carousel" class="carousel slide" data-ride="carousel">
+                <div id="featured-events-carousel" class="carousel slide carousel-heights" data-ride="carousel">
                   <div class="carousel-inner">
                     <?php $e = 0; while(have_rows('featured_events')): the_row(); ?>
 
